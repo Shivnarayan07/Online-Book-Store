@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .adminlog-form {
+    width: 300px;
+    margin: 100px auto;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+  }
+  
+  .adminlog-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .adminlog-form input[type="text"],
+  .adminlog-form input[type="email"],
+  .adminlog-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .adminlog-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1b1a60;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .adminlog-form button:hover {
+    background-color: rgb(63, 123, 63);
+  }
+  
+
+  #nv{
+    /* align-content: center;     #0F1035*/
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0F1035;
+    height: 100%vh; 
+    width: 100%vw;
+    color: #DCF2F1;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+a{
+    color: #DCF2F1;
+    text-decoration: none;
+}
+
+
+/* login css on navbar */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7FC7D9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #17165a;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* footer */
+  .footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0F1035;
+    color: white;
+    text-align: center;
+ }

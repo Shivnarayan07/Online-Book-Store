@@ -1,0 +1,112 @@
+/* Reset some default styles */
+#abutton{
+    margin: 7px;
+    padding: 8px;
+    background-color: #92C7CF;
+    color: #176B87;
+}
+#crudButton button {
+   
+}
+
+body {
+    /* font-family: Arial, sans-serif; */
+}
+
+/* Navigation styles */
+nav {
+    /* background-color: #333; */
+    color:#176B87;;
+    /* padding: 10px; */
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    /* margin: 0 10px; */
+}
+
+/* Login form styles */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    /* background-color: #fff; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    /* background-color: #333; */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Admin Dashboard styles */
+#adminDashboard {
+    /* display: none; */
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+#crudButtons {
+    margin-bottom: 20px;
+    
+}
+div#crudButton {
+    display: flex;
+}
+#crudButtons button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    /* background-color: #333; */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add Book Form styles */
+#addBookForm {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Book List Container styles */
+#bookListContainer {
+    /* Add styles as needed */
+}
+
+/* Footer styles */
+.footer {
+    /* background-color: #333; */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+form#get {
+    background-color: #97d1f2;
+}
