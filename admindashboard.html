@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/temp.css">
+</head>
+
+<body>
+    <nav>
+        <div id="nv">
+            <h1>
+                <a href="index.html">Home</a></h1>
+                <h1><a href="books.html">Books</a></h1>
+                <h1><a href="newarrival.html">New Arrivals</a></h1>
+                <h1><a href="search.html">Search</a></h1>
+                
+            </div>
+        </nav>
+    
+    <center><h1 id="head">Admin Dashboard</h1></center>
+<div id="adminDashboard">
+
+        <!-- Add buttons for CRUD operations -->
+        <div id="crudButton">
+            <button id="abutton" onclick="showAddBookForm()">Add Book</button>
+            <button id="abutton" onclick="showEditBookForm()">Edit Book</button>
+            <button id="abutton" onclick="showDeleteBook()">Delete Book</button>
+            <button id="abutton" onclick="getAllBooks()">View All</button>
+            
+            <!-- <button id="abutton" onclick="getUser()">Get User Details</button> -->
+            <button id="abutton" onclick="getAllUser()">Get All Users</button>
+            <button id="abutton" onclick="getAllProducts()">Get All Products</button>
+            <!-- <button id="abutton" onclick="getOrders()">Get Orders</button> -->
+            <button id="abutton" onclick="getAllorders()">Get All Orders</button>
+        </div>
+
+         <!-- User List -->
+         <div id="userListContainer" style="display: none;">
+            <h1>User List</h1>
+            <ul id="userList"></ul>
+        </div>
+            <!-- product list -->
+        <div id="productListContainer" style="display: none;">
+            <h1>Product List</h1>
+            <ul id="productList"></ul>
+        </div>
+
+
+        <!-- Form for adding new books -->
+        <form id="addBookForm" style="display: none;" enctype="multipart/form-data">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br>
+            <label for="image">Image:</label><br>
+            <input type="file" id="image" name="image" accept="image/*" required><br>
+            <label for="price">Price:</label><br>
+            <input type="number" id="price" name="price" required><br>
+            <button type="submit" onclick="addBook()" >Add Book</button>
+        </form>
+
+           
+           
+        <!-- Form for deleting book by titile -->
+        <form id="deleteBookForm" style="display: none;">
+            <label for="deleteTitle">Title:</label><br>
+            <input type="text" id="deleteTitle" name="deleteTitle" required><br>
+            <button type="button" onclick="deleteBook()">Delete Book</button>
+        </form>
+
+        <!-- Form for editing existing books -->
+        <form id="editBookForm" style="display: none;">
+            <label for="editTitle">Title:</label><br>
+            <input type="text" id="editTitle" name="editTitle" required><br>
+            <label for="editPrice">Price:</label><br>
+            <input type="number" id="editPrice" name="editPrice" required><br>
+            <button type="button" onclick="editBook()">Edit Book</button>
+        </form>
+    </div>
+
+    
+
+    <script>
+        
+        var addBookForm = document.getElementById("addBookForm");
+    var deleteBookForm = document.getElementById("deleteBookForm");
+    var editBookForm = document.getElementById("editBookForm");
+
+    function showAddBookForm() {
+        addBookForm.style.display = "block";
+        deleteBookForm.style.display = "none";
+        editBookForm.style.display = "none";
+    }
+
+    function showDeleteBook() {
+        addBookForm.style.display = "none";
+        deleteBookForm.style.display = "block";
+        editBookForm.style.display = "none";
+    }
+
+    function showEditBookForm() {
+        addBookForm.style.display = "none";
+        deleteBookForm.style.display = "none";
+        editBookForm.style.display = "block";
+    }
+
+        function getAllBooks() {
+             window.location.href = 'books.html';
+        }
+       
+    </script>
+    <script src="./js/crud.js"></script>
+</body>
+</html>

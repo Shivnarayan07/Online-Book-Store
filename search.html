@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/book.css">
+    <style>
+   .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.search-container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 5px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#searchbutton {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="nv" style="position: relative;">
+            <!-- <a href="./index.html"><img id="icon" src="./bookicon.png" alt=""></a> -->
+            <h1>
+                <a href="index.html">Home</a></h1>
+                <h1><a href="books.html">Books</a></h1>
+                <h1><a href="newarrival.html">New Arrivals</a></h1>
+                <h1><a href="">Search</a></h1>
+                <h1><a href="">Contact Us</a></h1>
+            </div>
+        </nav>
+
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by title...">
+        <button id="searchbutton" onclick="searchBooks()">Search</button>
+    </div>
+    <div id="searchResults"></div>
+
+    <script src="./js/crud.js"></script>
+</body>
+</html>

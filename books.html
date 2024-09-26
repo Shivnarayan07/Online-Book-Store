@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./book.css"> -->
+</head>
+
+<style>
+    body{
+       background-color: #EEF5FF;
+    }
+    .card {
+    box-shadow: 0 4px 8px 0 rgba(12, 4, 18, 0.9);
+      /* max-width: 300px; */
+      height: 500PX;
+      width: 300PX;
+      background-color:#B4D4FF;
+      margin: 15px;
+      text-align: center;
+      font-family: arial;
+    }
+    
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
+    
+    .card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #312d33;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+    #Product{
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    }
+    
+    .card button:hover {
+      opacity: 0.7;
+    }
+    </style>
+
+    
+<body>
+    
+    <nav>
+        <div id="nv">
+            <!-- <a href="./index.html"><img id="icon" src="./bookicon.png" alt=""></a> -->
+            <h1>
+                <a href="index.html">Home</a></h1>
+                <h1><a href="books.html">Books</a></h1>
+                <h1><a href="">New Arrivals</a></h1>
+                <h1><a href="./search.html">Search</a></h1>
+                <h1><a href="">Contact Us</a></h1>
+                <h1> <a href="addtocart.html"><img id="ab" src="#" alt=""> MyCart</a> </h1>  
+            </div>
+        </nav>
+  
+    <h2 style="text-align:center ; color: rgb(5, 5, 81);"> ALL BOOKS</h2>
+  <div id ="Product">
+    <div class="card">
+    </div> 
+</div>
+<hr style="height: 1px; background-color: rgb(32, 42, 148); ">
+        <br>
+         <div class="r1">          
+            <div class="column1"> <h1>Fast Delivery</h1> <img src="./images/Delivery.png" alt=""> <br>Shipping Worldwide</div>
+                <div class="column1"><a href="" style="color: black;"><h1>Open Discount</h1></a> <hr> <br><a href="" style="color: #13386a;">Offering Open Discount</a></div>
+                    <div class="column1"><h1>Eyes On Quality</h1> <br> Publishing Quality Work</div>
+                       <div class="column1"><h1>24/7 Support</h1> <br>Serving Every Moments</div>
+          
+            </div>
+            <hr style="height: 1px;  ">
+            <br>
+            <div class="r2">
+                    
+                <div class="column2">  <h1>   MS Books Store </h1>Best Book Seller <br> 
+                    <img style="height: 2rem; width: 2rem;" src="./images/location_12202010.png" alt="">
+                    <br> MS Books Store , Pune , Maharashtra- 411044 <br> <img  style="height: 2rem; width: 2rem;" src="./images/viber_152851.png" alt=""> <br> +91-9112569873 
+                     <br> <img  style="height: 2rem; width: 2rem;" src="./images/send-letter-icon_11917754.png" alt=""><br> msbooksstore@gmail.com</div>
+               
+                     <div class="column2"> <h2 style="color: rgb(82, 113, 35); letter-spacing: 3px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; ">INFORMATION</h2><br><br> <br><hr>
+                     
+                     <br> 
+                     <a href="" style="color: rgb(24, 57, 118);"> Shipping Policy</a> <br><br>
+                        <a href="" style="color: rgb(24, 57, 118);">Refund & Return Policy</a><br><br>
+                            <a href="" style="color: rgb(24, 57, 118);">Terms & Conditions</a><br><br>
+                                <a href="" style="color: rgb(24, 57, 118);;">Privacy Policy</a><br><br>
+                                    <a href=""  style="color: rgb(24, 57, 118);" >Contact us</a> <br><br>
+                                        <a href="" style="color: rgb(24, 57, 118); ">Sitemap</a>   </div> 
+                
+            <div class="column2"> <h2  style="color: rgb(82, 113, 35); letter-spacing: 3px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">MY ACCOUNT</h2> <br><br><br><hr>
+                                  <br>
+                    <a href="" style="color: rgb(24, 57, 118);"> My Account</a> <br><br>
+                        <a href="" style="color: rgb(24, 57, 118);">Wishlist</a><br><br>
+                            <a href="" style="color: rgb(24, 57, 118);">Orders</a><br><br>
+                                <a href="" style="color: rgb(24, 57, 118);;">Cart</a><br><br>
+                                    <a href=""  style="color: rgb(24, 57, 118);" >Checkout</a> <br><br>
+                                 
+                            </div>
+                             <div class="column2">   <h2 style="color: rgb(82, 113, 35); letter-spacing: 3px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; " > SIGNUP NEWSLETTER!</h2> 
+                                 <br> <br> <hr> <br>
+                             <p>Get All The Latest Information On New Arrival  <br>Book, Sales And Offers. Sign Up For Newsletter !</p>
+
+                                <br> <input style="height: 25px;" type="email" placeholder="email" > <button type="submit" style="height:fit-content; width:fit-content; background-color: rgb(2, 2, 82);"> Submit</button>
+                            </div>
+            </div>
+            <div class="footer">
+                <a href="#">Home</a> | <a href="#">Search</a> | <a href="#">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />
+                Copyright © 2024<a href="#"><strong>BookStore pvt.Ltd</strong></a> 
+            </div> 
+        <script src="./js/book.js"></script>
+    </body>
+ </html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/book.css">
+</head>
+<body>
+    <nav>
+        <div id="nv">
+            <h1><a href="index.html">Home</a></h1>
+            <h1><a href="books.html">Books</a></h1>
+            <h1><a href="">New Arrivals</a></h1>
+            <h1><a href="./search.html">Search</a></h1>
+            <h1><a href="">Contact Us</a></h1>
+            <h1> <a href="addtocart.html"><img id="ab" src="#" alt=""> MyCart</a> </h1>  
+        </div>
+    </nav>
+    <header>
+        <center>
+            <h1>Welcome User!</h1>
+        </center>
+    </header>
+
+    <h2 style="text-align: center; color: rgb(5, 5, 81);">My Cart</h2>
+    <div id="cart-items" style="padding: 20px; text-align: center;"></div>
+    <button id="place-order-btn" style="margin: 10px auto; display: block;">Place Order</button>
+    
+    <script>
+        // Function to handle placing order
+        function placeOrder() {
+            if (cart.length === 0) {
+                alert('Your cart is empty.');
+            } else {
+                // Send HTTP POST request to backend to store order
+                fetch('http://localhost:8080/orders', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ items: cart })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Order placed successfully
+                        alert('Order placed successfully!');
+                        cart = [];
+                        localStorage.removeItem('cart'); // Remove cart data from localStorage
+                        displayCartItems(); // Update cart display
+                    } else {
+                        // Error handling
+                        throw new Error('Failed to place order');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error placing order:', error);
+                    alert('Failed to place order. Please try again.');
+                });
+            }
+        }
+
+        // Add event listener for place order button
+        document.getElementById('place-order-btn').addEventListener('click', function() {
+            placeOrder();
+        });
+
+        // Function to display cart items and calculate total price
+        function displayCartItems() {
+            var cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = ''; // Clear previous content
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                return;
+            }
+
+            var totalPrice = 0;
+
+            // Iterate over each item in the cart
+            cart.forEach(function(item, index) {
+                var itemHTML = `
+                    <div style="margin-bottom: 20px;">
+                        <h3>${item.title}</h3>
+                        <p>Price: ₹${item.price}</p>
+                    </div>
+                `;
+                cartItemsContainer.innerHTML += itemHTML;
+
+                // Calculate total price
+                totalPrice += item.price;
+            });
+
+            // Display total price
+            var totalPriceHTML = `<p>Total Price: ₹${totalPrice.toFixed(2)}</p>`;
+            cartItemsContainer.innerHTML += totalPriceHTML;
+        }
+
+        // Initialize cart
+        var cart = [];
+
+        // Retrieve cart from localStorage if it exists
+        if (localStorage.getItem('cart')) {
+            cart = JSON.parse(localStorage.getItem('cart'));
+        }
+
+        // Call function to display cart items when the page loads
+        displayCartItems();
+    </script>
+</body>
+</html>
